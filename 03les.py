@@ -12,7 +12,16 @@ def start(message):
     btn2 = types.KeyboardButton('Удалить фото')
     btn3 =  types.KeyboardButton('Изменить текст')
     markup.row(btn2, btn3)
-    bot.send_message(message.chat.id, 'Привет', reply_markup=markup)
+    file = open('./mushroom.jpg', 'rb')
+    bot.send_photo(message.chat.id, file, reply_markup=markup)
+    # bot.send_message(message.chat.id, 'Привет', reply_markup=markup)
+    bot.register_next_step_handler(message, on_click)
+
+def on_click(message):
+    if message.text.lower() == 'перейти на сайт':
+        bot.send_message(message.chat.id, 'Website is open')
+    elif message.text.lower() == 'удалить фото':
+        bot.send_message(message.chat.id, 'Delete')
 
 @bot.message_handler(content_types=['photo'])
 def get_photo(message):
@@ -30,7 +39,5 @@ def callback_massage(callback):
         bot.delete_message(callback.message.chat.id, callback.message.message_id - 1)
     elif callback.data == 'edit':
         bot.edit_message_text('Edit text', callback.message.chat.id, callback.message.message_id)
-
-
 
 bot.polling(none_stop=True)
