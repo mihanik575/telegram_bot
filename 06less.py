@@ -40,7 +40,7 @@ def callback(call):
     # print(amount)
     # print(values[0])
     # print(values[1])
-    # print(res)
+    print(res)
 
 # https://www.youtube.com/watch?v=YrDL6EpYNiA&list=PL0lO_mIqDDFUev1gp9yEwmwcy8SicqKbt&index=6
 # print(currency.convert(50, 'USD', 'EUR'))
