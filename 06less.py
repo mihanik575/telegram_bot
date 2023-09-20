@@ -3,7 +3,7 @@ import telebot
 from currency_converter import CurrencyConverter
 from telebot import types
 
-bot = telebot.TeleBot('6531026375:AAF7WoOEEogVcI-UtKhe9Y3ptYC3gZNW6nY')
+bot = telebot.TeleBot('6531026375:AAHTVGDbN_FqCc3GAo4IrH3yFy6pre8M53w')
 currency = CurrencyConverter()
 cash: int = 0
 
