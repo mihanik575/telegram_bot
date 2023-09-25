@@ -1,3 +1,4 @@
+# https://youtu.be/y65BZbNB0YA?si=VaWRDNtyCc9XuKnf
 
 from aiogram import Bot, Dispatcher, types, executor
 from aiogram.types.web_app_info import WebAppInfo
@@ -11,6 +12,6 @@ async def start(message: types):
     markup = types.ReplyKeyboardMarkup()
     markup.add(types.KeyboardButton('Открыть веб страницу', web_app = WebAppInfo)
     await message.answer('Привет, мой друг!', reply_markup = markup)
-# https: // www.youtube.com / watch?v = y65BZbNB0YA & list = PL0lO_mIqDDFUev1gp9yEwmwcy8SicqKbt & index = 8
+
 
 executor.start_polling(dp)
